@@ -26,6 +26,7 @@ searchButton.addEventListener("click", function (event){
             let barType = document.createElement("p")
             let website = document.createElement("a")
             let brewery = document.getElementById("brewery")
+            let phoneNumber = document.createElement("p")
             brewery.appendChild(newdiv)
             newdiv.classList.add("card")
             newdiv.appendChild(barName)
@@ -36,13 +37,29 @@ searchButton.addEventListener("click", function (event){
             address.classList.add("card-title")
             secondDiv.appendChild(barType)
             barType.classList.add("card-text")
+            secondDiv.appendChild(phoneNumber)
+            phoneNumber.classList.add("card-text")
             secondDiv.appendChild(website)
             website.classList.add("btn")
             website.setAttribute("href", breweries[i].website_url)
+            phoneNumber.textContent = (breweries[i].phone)
             barName.textContent = (breweries[i].name)
             address.textContent = (breweries[i].address_1 )
-            barType.textContent = ("This brewery is a " + breweries[i].brewery_type + " brewery")
+            barType.textContent = ("This brewery is a " + breweries[i].brewery_type + " brewery!")
             website.textContent = (breweries[i].website_url)
+
+            if (!breweries[i].address_1) {
+                address.textContent = "Address unknown"
+            }
+            if (!breweries[i].website_url) {
+                website.textContent = "Website not found"
+            }
+            if (!breweries[i].brewery_type) {
+                barType.textContent = "We're not sure what kind of bar this is!"
+            }
+            if (!breweries[i].phone) {
+                phoneNumber.textContent = "Phone number not found"
+            }
         }
     })
 
