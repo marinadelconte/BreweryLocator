@@ -1,4 +1,9 @@
-let searchButton = document.getElementById("button-addon1")
+let searchButton = document.getElementById("button-addon1");
+let modal = document.querySelector(".modal");
+let modalOpen = document.querySelector("#open");
+let modalClose = document.querySelector("#close");
+let myModal = new bootstrap.Modal(document.querySelector('.modal'))
+  
 
 
 searchButton.addEventListener("click", function (event){
@@ -8,6 +13,10 @@ searchButton.addEventListener("click", function (event){
     let numResults = document.getElementById("resultsNumber").value;
 
 
+        if (numResults <= 0 || numResults === "" || cityName === "") {
+            myModal.show();
+            return;
+        }
 
     fetch(`https://api.openbrewerydb.org/v1/breweries?by_city=${cityName}&per_page=${numResults}`)
     .then(function(response){
@@ -75,14 +84,7 @@ searchButton.addEventListener("click", function (event){
 
 
 
-
-
-
-
 })
-
-
-
 
 
 
@@ -95,47 +97,44 @@ searchButton.addEventListener("click", function (event){
 
 
 
+// requestJoke.addEventListener("click", function (event) {
+// event.target.matches("#jokeBtn");
 
-
-
-requestJoke.addEventListener("click", function (event) {
-event.target.matches("#jokeBtn");
-
-fetch('https://geek-jokes.sameerkumar.website/api?format=json')
-.then(function(response){
+// fetch('https://geek-jokes.sameerkumar.website/api?format=json')
+// .then(function(response){
     
-return response.json()     
-})
-.then(function (newJoke) {
-    console.log(newJoke);
-    let randomJoke = newJoke.joke; 
-    returnJoke.textContent = randomJoke;
-})
-})
+// return response.json()     
+// })
+// .then(function (newJoke) {
+//     console.log(newJoke);
+//     let randomJoke = newJoke.joke; 
+//     returnJoke.textContent = randomJoke;
+// })
+// })
 
-anotherJoke.addEventListener("click", function(event) {
+// anotherJoke.addEventListener("click", function(event) {
 
 
-    event.target.matches("#badJoke");
+//     event.target.matches("#badJoke");
 
    
-    fetch('https://geek-jokes.sameerkumar.website/api?format=json')
-    .then(function(response){
+//     fetch('https://geek-jokes.sameerkumar.website/api?format=json')
+//     .then(function(response){
         
-    return response.json()     
-    })
-    .then(function (newJoke) {
-        console.log(newJoke);
-        randomJoke = newJoke.joke; 
-        returnJoke.textContent = randomJoke;
-    })
-})
+//     return response.json()     
+//     })
+//     .then(function (newJoke) {
+//         console.log(newJoke);
+//         randomJoke = newJoke.joke; 
+//         returnJoke.textContent = randomJoke;
+//     })
+// })
 
-keeper.addEventListener("click", function(event) {
+// keeper.addEventListener("click", function(event) {
 
-    event.target.matches("goodJoke");
+//     event.target.matches("goodJoke");
 
-    localStorage.setItem("randomJoke", returnJoke.textContent);
-})
+//     localStorage.setItem("randomJoke", returnJoke.textContent);
+// })
 
 
