@@ -19,7 +19,8 @@ searchButton.addEventListener("click", function (event){
       
 
         for (let i = 0; i < breweries.length; i++) {
-            let newdiv = document.createElement("div");
+            let newDiv = document.createElement("div");
+            newDiv.classList.add("newDiv")
             let barName = document.createElement("h5")
             let secondDiv = document.createElement("div");
             let address = document.createElement("h5")
@@ -27,11 +28,11 @@ searchButton.addEventListener("click", function (event){
             let website = document.createElement("a")
             let brewery = document.getElementById("brewery")
             let phoneNumber = document.createElement("p")
-            brewery.appendChild(newdiv)
-            newdiv.classList.add("card")
-            newdiv.appendChild(barName)
+            brewery.appendChild(newDiv)
+            newDiv.classList.add("card")
+            newDiv.appendChild(barName)
             barName.classList.add("card-header")
-            newdiv.appendChild(secondDiv)
+            newDiv.appendChild(secondDiv)
             secondDiv.classList.add("card-body")
             secondDiv.appendChild(address)
             address.classList.add("card-title")
@@ -61,9 +62,15 @@ searchButton.addEventListener("click", function (event){
                 phoneNumber.textContent = "Phone number not found"
             }
         }
+        removeChildren();
     })
 
-
+    function removeChildren(){
+        let newDiv = document.querySelectorAll(".newDiv")
+       let mainDiv = document.getElementById("brewery")
+       if(newDiv)
+       mainDiv.removeChild(newDiv)
+    }
 
 
 
