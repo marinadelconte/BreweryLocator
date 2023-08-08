@@ -1,5 +1,5 @@
 let searchButton = document.getElementById("button-addon1")
-
+let brewDiv = document.getElementById("brewItems")
 
 searchButton.addEventListener("click", function (event){
 
@@ -26,7 +26,8 @@ searchButton.addEventListener("click", function (event){
             let address = document.createElement("h5")
             let barType = document.createElement("p")
             let website = document.createElement("a")
-            let brewery = document.getElementById("brewery")
+            let saveLocal = document.createElement("button")
+            let brewery = document.getElementById("brewItems")
             let phoneNumber = document.createElement("p")
             brewery.appendChild(newDiv)
             newDiv.classList.add("card")
@@ -41,19 +42,22 @@ searchButton.addEventListener("click", function (event){
             secondDiv.appendChild(phoneNumber)
             phoneNumber.classList.add("card-text")
             secondDiv.appendChild(website)
-            website.classList.add("btn")
+            secondDiv.appendChild(saveLocal)
+            saveLocal.classList.add("btn", "btn-outline-success")
+            website.classList.add("btn", "btn-outline-primary")
             website.setAttribute("href", breweries[i].website_url)
             phoneNumber.textContent = (breweries[i].phone)
             barName.textContent = (breweries[i].name)
             address.textContent = (breweries[i].address_1 )
             barType.textContent = ("This brewery is a " + breweries[i].brewery_type + " brewery!")
             website.textContent = (breweries[i].website_url)
-
+            saveLocal.textContent = ("I want to go to this brewery!")
             if (!breweries[i].address_1) {
                 address.textContent = "Address unknown"
             }
             if (!breweries[i].website_url) {
                 website.textContent = "Website not found"
+                website.classList.remove("btn-outline-primary")
             }
             if (!breweries[i].brewery_type) {
                 barType.textContent = "We're not sure what kind of bar this is!"
@@ -62,22 +66,27 @@ searchButton.addEventListener("click", function (event){
                 phoneNumber.textContent = "Phone number not found"
             }
         }
-        removeChildren();
+        // removeChildren();
     })
+brewDiv.addEventListener("click", function(event){
 
-    function removeChildren(){
-        let newDiv = document.querySelectorAll(".newDiv")
-       let mainDiv = document.getElementById("brewery")
-       if(newDiv)
-       mainDiv.removeChild(newDiv)
-    }
+if (event.target.matches("button")) {
+    let newDiv = event.target.parentElement;
+    console.log(newDiv)
+    divContent = newDiv.innerHTML;
+    localStorage.setItem("divContent", divContent)
 
-
-
-
+}
 
 
 
+})
+    // function removeChildren(){
+    //     let newDiv = document.querySelectorAll(".newDiv")
+    //    let mainDiv = document.getElementById("brewery")
+    //    if(newDiv)
+    //    mainDiv.removeChild(newDiv)
+    // }
 
 })
 
