@@ -42,11 +42,13 @@ text-align: center;
 @media screen and (min-width: 768px) {
     .card {
         width: 50;
+        flex-direction: column;
     }
 }
 
 @media screen and (min-width: 600px) {
     .card {
         width: 100;
+        flex-direction: column;
     }
 }
