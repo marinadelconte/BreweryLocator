@@ -1,7 +1,4 @@
 let searchButton = document.getElementById("button-addon1");
-let modal = document.querySelector(".modal");
-let modalOpen = document.querySelector("#open");
-let modalClose = document.querySelector("#close");
 let myModal = new bootstrap.Modal(document.querySelector('.modal'))
   
 
