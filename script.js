@@ -1,4 +1,6 @@
 
+
+
 //Waiting for buttons to be created
 
 // let requestJoke = document.querySelector("#jokeBtn");
@@ -50,3 +52,5 @@ keeper.addEventListener("click", function(event) {
 
     localStorage.setItem("randomJoke", returnJoke.textContent);
 })
+
+
