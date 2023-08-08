@@ -1,6 +1,7 @@
 
 
 
+
 //Waiting for buttons to be created
 
 // let requestJoke = document.querySelector("#jokeBtn");
