@@ -2,8 +2,6 @@ let searchButton = document.getElementById("button-addon1")
 let myModal = new bootstrap.Modal(document.querySelector('.modal'));
 let myModal2 = new bootstrap.Modal(document.querySelector('.modal-num2'));
 
-
-
 function displaySearch() {
 
     let cityName = document.getElementById("cityChoice").value;
@@ -80,8 +78,6 @@ function removeChildren(brewDiv) {
 }
 
 
-
-
 let brewDiv = document.getElementById("brewItems")
 let childNum = 0;
 searchButton.addEventListener("click", function (event) {
@@ -94,12 +90,6 @@ searchButton.addEventListener("click", function (event) {
         displaySearch()
     }
 })
-
-
-
-// Random Joke Section
-
-
 
 let requestJoke = document.querySelector("#jokeBtn");
 let returnJoke = document.querySelector("#joke")
@@ -166,8 +156,6 @@ keeper.addEventListener("click", function (event) {
 
     finalJoke.textContent = "While you're there, try out this joke: " + jokeStorage;
 
-
-
 })
 
 brewDiv.addEventListener("click", function (event) {
@@ -189,5 +177,4 @@ function removeJokeItems(){
     requestJoke.style.visibility = "hidden"
     jokeHeader.style.visibility = "hidden"
 }
-
 
