@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,13 @@
     <title>Brewery Locator & Joke Generator</title>
     
 </head>
+
 <body>
     <header>Brewery Locator & Joke Generator</header>
     <section>
         <div class="container" id="card1">
             <div class="container" id="brewery">
+                <div id="brewItems"></div>
                 
 
                 <div class="input-group">
@@ -55,6 +58,62 @@
 
         
         </div>
+            </div>
+        </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <form>
+                     <p>Please enter a city and the number of breweries that you would like to view.</p>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                    </div>
+                    </div>
+                    </div>
+            </div>
+                    
+                                  
+                                       
+                    <div class="container" id="card2">
+
+
+                    </div>
+
+                    <div class="container" id="card3">
+
+
+                    </div>
+                    <div class="modal-num2 fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <form>
+                     <p>Please select a joke.</p>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                    </div>
+                    </div>
+                    </div>
+            </div>
     </section>
     <footer>
         <h6>2023 &copy;</h6>
@@ -64,4 +123,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="./script.js"></script> </script>
 </body>
+
 </html>
+    
