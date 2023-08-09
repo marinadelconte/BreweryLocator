@@ -181,8 +181,4 @@ brewDiv.addEventListener("click", function (event) {
 
 
 
-// =======
 
-
-
-// >>>>>>> 9454ba5311651eb287090fcc54459f1c8059541b
