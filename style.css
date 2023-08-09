@@ -6,6 +6,10 @@ header {
 
 }
 
+.joke-options {
+    display: none;
+    flex-direction: row; 
+}
 
 
 
