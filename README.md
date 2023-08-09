@@ -2,12 +2,12 @@
 
 ## Description
 
-Using an API to locate breweries by city and another API to generate a random joke, we have created the Brewery Locator & Random Joke Generator application. Using two API's paired together for this application provides users with both a list of breweries in their area, as well as a random joke that they can use once they get there. 
+Using an API to locate breweries by city and another API to generate a random joke, we have created the Brewery Locator & Random Joke Generator application. Using two API's paired together for this application provides users with both a list of breweries in their area, as well as a random joke that they can use once they get there. The user will select a brewery from the list provided and a joke from the random joke generator.
 
 
 ## Usage
 
-To use, first enter a city into the search bar and the number of breweries that you would like to see located in or near that city. If either field is left blank, a message will pop-up prompting you to provide a response. From the list of breweries that are provided, you can click to select the one that you would like to go to. Next, you will be prompted to generate a random joke. Once the joke is generated, you will be asked if this is the joke that you would like to use, or if you would like to have a new joke generated.
+To use, first enter a city into the search bar and the number of breweries that you would like to see located in or near that city. If either field is left blank, a message will pop-up prompting you to provide a response. From the list of breweries that are provided, you can click to select the one that you would like to go to. Next, you will be prompted to generate a random joke. Once the joke is generated, you will be asked if this is the joke that you would like to use, or if you would like to have a new joke generated. Once a brewery and a joke are selected, your final choices will display on the screen.
 
 
 The Brewery Locator & Random Joke Generator can be accessed via the following link:
