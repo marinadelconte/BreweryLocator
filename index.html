@@ -2,118 +2,116 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 
-  <title>Brewery Locator & Joke Generator</title>
+    <title>Brewery Locator & Joke Generator</title>
 
 </head>
 
 <body>
-  <header>Brewery Locator & Joke Generator</header>
-  <section>
-    <div class="container" id="card1">
-      <div class="container" id="brewery">
+    <header>Brewery Locator & Joke Generator</header>
+    <section>
+        <div class="container" id="card1">
+            <div class="container" id="brewery">
 
 
-        <div class="input-group">
-          <span class="input-group-text">City of choice, and number of results</span>
-          <input type="text" aria-label="First name" class="form-control" id="cityChoice">
-          <input type="text" aria-label="Last name" class="form-control" id="resultsNumber">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Search</button>
+                <div class="input-group">
+                    <span class="input-group-text input-color">City of choice, and number of results</span>
+                    <input type="text" aria-label="First name" class="form-control" id="cityChoice">
+                    <input type="text" aria-label="Last name" class="form-control" id="resultsNumber">
+                    <button class="btn btn-outline-dark input-color" type="button" id="button-addon1">Search</button>
+                </div>
+                <div id="brewItems"></div>
+
+            </div>
+
+
         </div>
-        <div id="brewItems"></div>
 
-      </div>
-
-
-    </div>
-
-    <!-- <input>
+        <!-- <input>
             <input> -->
 
 
-    
-    <div class="container" id="card2">
-      <button id="jokeBtn">Joke Me</button>
-      <p id="joke"></p>
-      <div class="joke-options">
-        <button id="badJoke">Boo. Give me another one.</button>
-        <button id="goodJoke">That's a good one.</button>
-      </div>
+
+        <div class="container" id="card2">
+            <button id="jokeBtn">Joke Me</button>
+            <p id="joke"></p>
+            <div class="joke-options">
+                <button id="badJoke">Boo. Give me another one.</button>
+                <button id="goodJoke">That's a good one.</button>
+            </div>
 
 
-    </div>
-
-    <div class="container" id="card3">
-      <h6 id="finalJoke"></h6>
-
-
-    </div>
- 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <p>Please enter a city and the number of breweries that you would like to view.</p>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
         </div>
-      </div>
-    </div>
+
+        <div class="container" id="card3">
+            <h6 id="finalJoke"></h6>
 
 
-
-
-    <div class="container" id="card2">
-
-
-    </div>
-
-    <div class="container" id="card3">
-
-
-    </div>
-    <div class="modal-num2 fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <p>Please select a joke.</p>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
         </div>
-      </div>
-    </div>
 
-  </section>
-  <footer>
-    <h6>2023 &copy;</h6>
-  </footer>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <p>Please enter a city and the number of breweries that you would like to view.</p>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <script src="./script.js"></script>
+
+
+
+        </div>
+        <div class="modal-num2 fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <p>Please select a joke.</p>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        
+        <h6>2023 &copy;</h6>
+        
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 
 </body>
 

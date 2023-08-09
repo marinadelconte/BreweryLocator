@@ -1,8 +1,17 @@
+body {
+    background-color: rgb(194, 221, 255);
+    font-family: 'Lora', serif;
+    background-image: linear-gradient(to right, rgba(255,228,196,0), rgb(97, 99, 122));
+    
+}
+
+
 header {
     text-align: center;
     font-size: 25px;
     padding: 15px;
-    background-color: bisque;
+    background-color: rgb(189, 126, 70);
+    background-image: linear-gradient(to right, rgba(255,228,196,0), rgba(255,228,196,1));
 
 }
 
@@ -11,10 +20,22 @@ header {
     flex-direction: row; 
 }
 
+.input-color {
+    background-color: rgb(183, 141, 108);
+    border: 1px black solid
+}
 
 
 footer {
+margin-left: 13%;    
 text-align: center;
+border-top: 2px solid black;
+width: 70%;
+height: 15%;
+}
+
+footer, h6 {
+    padding-top: 10px;
 }
 
 @media screen and (min-width: 992px) {
