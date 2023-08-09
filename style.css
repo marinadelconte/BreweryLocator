@@ -25,6 +25,10 @@ header {
     border: 1px black solid
 }
 
+#card1{
+    max-height: 700px;
+    overflow-y: scroll;
+}
 
 footer {
 margin-left: 13%;    
