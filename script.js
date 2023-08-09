@@ -177,6 +177,11 @@ brewDiv.addEventListener("click", function (event) {
         console.log(newDiv)
         divContent = newDiv.innerHTML;
         localStorage.setItem("divContent", divContent)
+        let brewStorage = localStorage.getItem("divContent");
+        let finalBrew = document.getElementById("finalBrew");
+        finalBrew.innerHTML = "You selected the following brewery: " + brewStorage;
+        let buttonFromCard = finalBrew.querySelector("button")
+        finalBrew.removeChild(buttonFromCard);
     }
 })
 
