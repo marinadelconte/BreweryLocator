@@ -98,6 +98,11 @@ let keeper = document.querySelector("#goodJoke");
 let jokeOptions = document.getElementsByClassName("joke-options")
 let jokeChoice = document.querySelector("#finalJoke");
 let randomJoke = "";
+let jokeHeader = document.querySelector("#jokeHeader")
+
+
+
+
 
 requestJoke.addEventListener("click", function (event) {
     event.target.matches("#jokeBtn");
@@ -116,6 +121,7 @@ requestJoke.addEventListener("click", function (event) {
                 jokeOptions[i].style.display = "flex";
 
             }
+            removeJokeItems();
         })
 })
 
@@ -171,4 +177,8 @@ brewDiv.addEventListener("click", function (event) {
     }
 })
 
+function removeJokeItems(){
+    requestJoke.style.visibility = "hidden"
+    jokeHeader.style.visibility = "hidden"
+}
 

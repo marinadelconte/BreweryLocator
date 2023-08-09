@@ -11,6 +11,11 @@ header {
     flex-direction: row; 
 }
 
+#card1{
+    max-height: 700px;
+    overflow-y: scroll;
+}
+
 footer {
 text-align: center;
 }
