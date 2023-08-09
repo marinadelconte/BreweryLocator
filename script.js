@@ -170,10 +170,6 @@ brewDiv.addEventListener("click", function (event) {
         finalBrew.innerHTML = "You selected the following brewery: " + brewStorage;
         let buttonFromCard = finalBrew.querySelector("button")
         finalBrew.removeChild(buttonFromCard);
-        
-
-
-        
     }
 })
 
