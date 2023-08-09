@@ -1,4 +1,6 @@
 let searchButton = document.getElementById("button-addon1")
+let myModal = new bootstrap.Modal(document.querySelector('.modal'));
+let myModal2 = new bootstrap.Modal(document.querySelector('.modal-num2'));
 
 
 
@@ -6,6 +8,11 @@ function displaySearch() {
 
     let cityName = document.getElementById("cityChoice").value;
     let numResults = document.getElementById("resultsNumber").value;
+
+    if (numResults <= 0 || numResults === "" || cityName === "") {
+        myModal.show();
+        return;
+    }
 
     fetch(`https://api.openbrewerydb.org/v1/breweries?by_city=${cityName}&per_page=${numResults}`)
         .then(function (response) {
@@ -65,12 +72,13 @@ function displaySearch() {
             } childNum = breweries.length
         })
 }
-function removeChildren() {
-    let newDiv = document.querySelectorAll(".newDiv")
-    let mainDiv = document.getElementById("brewery")
-    if (newDiv)
-        mainDiv.removeChild(newDiv)
+function removeChildren(brewDiv) {
+    let parentDiv = brewDiv;
+    while (parentDiv.firstChild) {
+        brewDiv.removeChild(parentDiv.firstChild)
+    }
 }
+
 
 
 
@@ -172,14 +180,9 @@ brewDiv.addEventListener("click", function (event) {
 })
 
 
-function removeChildren(brewDiv) {
-    let parentDiv = brewDiv;
-    while (parentDiv.firstChild) {
-        brewDiv.removeChild(parentDiv.firstChild)
-    }
-}
+
+// =======
 
 
 
-
-
+// >>>>>>> 9454ba5311651eb287090fcc54459f1c8059541b
