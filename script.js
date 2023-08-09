@@ -1,37 +1,20 @@
 let searchButton = document.getElementById("button-addon1")
-let brewDiv = document.getElementById("brewItems")
-let childNum = 0;
-searchButton.addEventListener("click", function(event){
-    if (childNum === 0) {
-    displaySearch();}
-    else{removeChildren(brewDiv);
-        childNum = 0
-        displaySearch()
-    }
-})
 
 
 
-function displaySearch(){
-    
+function displaySearch() {
 
-    
-        let cityName = document.getElementById("cityChoice").value;
-        let numResults = document.getElementById("resultsNumber").value;
-    
-    
-    
-        fetch(`https://api.openbrewerydb.org/v1/breweries?by_city=${cityName}&per_page=${numResults}`)
-        .then(function(response){
-            
-        return response.json()     
+    let cityName = document.getElementById("cityChoice").value;
+    let numResults = document.getElementById("resultsNumber").value;
+
+    fetch(`https://api.openbrewerydb.org/v1/breweries?by_city=${cityName}&per_page=${numResults}`)
+        .then(function (response) {
+
+            return response.json()
         })
         .then(function (breweries) {
             console.log(breweries)
-          
-            
-                
-            
+
             for (let i = 0; i < breweries.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("newDiv")
@@ -62,7 +45,7 @@ function displaySearch(){
                 website.setAttribute("href", breweries[i].website_url)
                 phoneNumber.textContent = (breweries[i].phone)
                 barName.textContent = (breweries[i].name)
-                address.textContent = (breweries[i].address_1 )
+                address.textContent = (breweries[i].address_1)
                 barType.textContent = ("This brewery is a " + breweries[i].brewery_type + " brewery!")
                 website.textContent = (breweries[i].website_url)
                 saveLocal.textContent = ("I want to go to this brewery!")
@@ -79,20 +62,122 @@ function displaySearch(){
                 if (!breweries[i].phone) {
                     phoneNumber.textContent = "Phone number not found"
                 }
-            }childNum = breweries.length})}
-brewDiv.addEventListener("click", function(event){
+            } childNum = breweries.length
+        })
+}
+function removeChildren() {
+    let newDiv = document.querySelectorAll(".newDiv")
+    let mainDiv = document.getElementById("brewery")
+    if (newDiv)
+        mainDiv.removeChild(newDiv)
+}
+
+
+
+let brewDiv = document.getElementById("brewItems")
+let childNum = 0;
+searchButton.addEventListener("click", function (event) {
+    if (childNum === 0) {
+        displaySearch();
+    }
+    else {
+        removeChildren(brewDiv);
+        childNum = 0
+        displaySearch()
+    }
+})
+
+
+
+// Random Joke Section
+
+
+
+let requestJoke = document.querySelector("#jokeBtn");
+let returnJoke = document.querySelector("#joke")
+let anotherJoke = document.querySelector("#badJoke");
+let keeper = document.querySelector("#goodJoke");
+let jokeOptions = document.getElementsByClassName("joke-options")
+let jokeChoice = document.querySelector("#finalJoke");
+let randomJoke = "";
+
+
+
+
+
+
+requestJoke.addEventListener("click", function (event) {
+    event.target.matches("#jokeBtn");
+
+    fetch('https://geek-jokes.sameerkumar.website/api?format=json')
+        .then(function (response) {
+
+            return response.json()
+        })
+        .then(function (newJoke) {
+            console.log(newJoke);
+            randomJoke = newJoke.joke;
+            returnJoke.textContent = randomJoke;
+
+            for (let i = 0; i < jokeOptions.length; i++) {
+                jokeOptions[i].style.display = "flex";
+
+            }
+        })
+})
+
+anotherJoke.addEventListener("click", function (event) {
+
+
+    event.target.matches("#badJoke");
+
+
+    fetch('https://geek-jokes.sameerkumar.website/api?format=json')
+        .then(function (response) {
+
+            return response.json()
+        })
+        .then(function (newJoke) {
+            console.log(newJoke);
+            randomJoke = newJoke.joke;
+            returnJoke.textContent = randomJoke;
+        })
+})
+
+keeper.addEventListener("click", function (event) {
+
+
+    event.target.matches("goodJoke");
+
+    localStorage.setItem("randomJoke", randomJoke);
+
+    let jokeStorage = localStorage.getItem("randomJoke");
+
+    joke.style.display = "hidden";
+
+    finalJoke.textContent = "While you're there, try out this joke: " + jokeStorage;
+
+
+
+})
+
+brewDiv.addEventListener("click", function (event) {
 
     if (event.target.matches("button")) {
         let newDiv = event.target.parentElement;
         console.log(newDiv)
         divContent = newDiv.innerHTML;
-        localStorage.setItem("divContent", divContent)}})
+        localStorage.setItem("divContent", divContent)
+    }
+})
 
 
-function removeChildren(brewDiv){
+function removeChildren(brewDiv) {
     let parentDiv = brewDiv;
-  while (parentDiv.firstChild) {
-    brewDiv.removeChild(parentDiv.firstChild)}}
+    while (parentDiv.firstChild) {
+        brewDiv.removeChild(parentDiv.firstChild)
+    }
+}
 
 
 
