@@ -86,8 +86,6 @@ searchButton.addEventListener("click", function (event){
 
 
 
-Waiting for buttons to be created
-
 let requestJoke = document.querySelector("#jokeBtn");
 let returnJoke = document.querySelector("#joke")
 let anotherJoke = document.querySelector("#badJoke");
