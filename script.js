@@ -2,8 +2,6 @@ let searchButton = document.getElementById("button-addon1")
 let myModal = new bootstrap.Modal(document.querySelector('.modal'));
 let myModal2 = new bootstrap.Modal(document.querySelector('.modal-num2'));
 
-
-
 function displaySearch() {
 
     let cityName = document.getElementById("cityChoice").value;
@@ -80,8 +78,6 @@ function removeChildren(brewDiv) {
 }
 
 
-
-
 let brewDiv = document.getElementById("brewItems")
 let childNum = 0;
 searchButton.addEventListener("click", function (event) {
@@ -95,12 +91,6 @@ searchButton.addEventListener("click", function (event) {
     }
 })
 
-
-
-// Random Joke Section
-
-
-
 let requestJoke = document.querySelector("#jokeBtn");
 let returnJoke = document.querySelector("#joke")
 let anotherJoke = document.querySelector("#badJoke");
@@ -108,7 +98,7 @@ let keeper = document.querySelector("#goodJoke");
 let jokeOptions = document.getElementsByClassName("joke-options")
 let jokeChoice = document.querySelector("#finalJoke");
 let randomJoke = "";
-
+let jokeHeader = document.querySelector("#jokeHeader")
 
 
 
@@ -131,6 +121,7 @@ requestJoke.addEventListener("click", function (event) {
                 jokeOptions[i].style.display = "flex";
 
             }
+            removeJokeItems();
         })
 })
 
@@ -165,8 +156,6 @@ keeper.addEventListener("click", function (event) {
 
     finalJoke.textContent = "While you're there, try out this joke: " + jokeStorage;
 
-
-
 })
 
 brewDiv.addEventListener("click", function (event) {
@@ -184,10 +173,8 @@ brewDiv.addEventListener("click", function (event) {
     }
 })
 
+function removeJokeItems(){
+    requestJoke.style.visibility = "hidden"
+    jokeHeader.style.visibility = "hidden"
+}
 
-
-// =======
-
-
-
-// >>>>>>> 9454ba5311651eb287090fcc54459f1c8059541b
