@@ -146,6 +146,7 @@ keeper.addEventListener("click", function (event) {
 
 
     event.target.matches("goodJoke");
+    console.log("goodJoke");
 
     localStorage.setItem("randomJoke", randomJoke);
 
