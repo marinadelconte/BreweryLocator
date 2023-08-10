@@ -34,9 +34,9 @@ function displaySearch() {
                 brewery.appendChild(newDiv)
                 newDiv.classList.add("card")
                 newDiv.appendChild(barName)
-                barName.classList.add("card-header")
+                barName.classList.add("card-header", "brewcard-style-title")
                 newDiv.appendChild(secondDiv)
-                secondDiv.classList.add("card-body")
+                secondDiv.classList.add("card-body", "brewcard-style-body")
                 secondDiv.appendChild(address)
                 address.classList.add("card-title")
                 secondDiv.appendChild(barType)
@@ -45,8 +45,8 @@ function displaySearch() {
                 phoneNumber.classList.add("card-text")
                 secondDiv.appendChild(website)
                 secondDiv.appendChild(saveLocal)
-                saveLocal.classList.add("btn", "btn-outline-success")
-                website.classList.add("btn", "btn-outline-primary")
+                saveLocal.classList.add("btn", "btn-outline-dark", "input-color")
+                website.classList.add("btn", "btn-outline-dark", "input-color")
                 website.setAttribute("href", breweries[i].website_url)
                 phoneNumber.textContent = (breweries[i].phone)
                 barName.textContent = (breweries[i].name)
@@ -154,7 +154,7 @@ keeper.addEventListener("click", function (event) {
 
     joke.style.display = "hidden";
 
-    finalJoke.textContent = "While you're there, try out this joke: " + jokeStorage;
+    finalJoke.innerHTML = "<b> While you're there, try out this joke: </b>" + jokeStorage;
 
 })
 
@@ -167,7 +167,7 @@ brewDiv.addEventListener("click", function (event) {
         localStorage.setItem("divContent", divContent)
         let brewStorage = localStorage.getItem("divContent");
         let finalBrew = document.getElementById("finalBrew");
-        finalBrew.innerHTML = "You selected the following brewery: " + brewStorage;
+        finalBrew.innerHTML = "<b> You selected the following brewery</b>: " + brewStorage;
         let buttonFromCard = finalBrew.querySelector("button")
         finalBrew.removeChild(buttonFromCard);
     }
