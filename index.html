@@ -33,17 +33,18 @@
 
         <div class="container row col-lg-3 mt-4 col-md-6 col-sm-12 d-flex justify-content-center" id="card2">
             <h5 class="d-block row-lg-12" id="jokeHeader">Click the button below to recieve a random joke!</h5>
-            <button class="btn btn-primary d-block row-lg-12" id="jokeBtn">Joke Me</button>
+            <button class="btn btn-dark d-block row-lg-12 input-color" id="jokeBtn">Joke Me</button>
             <p id="joke"></p>
             <div class="joke-options ">
-                <button class="btn btn-danger mt-2 column-lg-6" id="badJoke">Boo. Give me another one.</button>
-                <button class="btn btn-primary mt-2 column-lg-6" id="goodJoke">That's a good one.</button>
+                <button class="btn btn-dark mt-2 column-lg-6 alt-color" id="badJoke">Boo. Give me another one.</button>
+                <button class="btn btn-dark mt-2 column-lg-6 input-color" id="goodJoke">That's a good one.</button>
             </div>
         </div>
 
-        <div class="container col-lg-4 mt-4 col-md-8 col-sm-12 d-flex justify-content-center" id="card3">
-            <h6 id="finalJoke"></h6>
+        <div class="container col px-2" id="card3">
             <div id="finalBrew"></div>
+            <h6 id="finalJoke"></h6>
+
         </div>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -51,7 +52,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close input-color" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form>

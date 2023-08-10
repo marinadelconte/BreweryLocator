@@ -1,8 +1,7 @@
 body {
     background-color: rgb(194, 221, 255);
     font-family: 'Lora', serif;
-    background-image: linear-gradient(to right, rgba(255,228,196,0), rgb(97, 99, 122));
-    
+    background-image: linear-gradient(to right, rgba(255,228,196,0), rgb(97, 99, 122));    
 }
 
 
@@ -24,6 +23,35 @@ header {
     background-color: rgb(183, 141, 108);
     border: 1px black solid
 }
+
+.alt-color {
+    background-color: rgb(106, 89, 77);
+    border: 1px black solid
+}
+
+.brewcard-style-body {
+    background-color: rgb(141, 136, 136);
+}
+
+.brewcard-style-title {
+    background-color:rgb(184, 172, 172)
+}
+
+#badJoke {
+    color: black;
+}
+
+#goodJoke {
+    color: black;
+}
+
+#jokeBtn {
+    color: black;
+}
+
+/*(225, 197, 197)
+(170, 130, 130);
+*/
 
 #card1{
     max-height: 700px;
