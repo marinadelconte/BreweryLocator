@@ -1,7 +1,7 @@
 let searchButton = document.getElementById("button-addon1")
 let myModal = new bootstrap.Modal(document.querySelector('.modal'));
 let myModal2 = new bootstrap.Modal(document.querySelector('.modal-num2'));
-
+let thirdCard = document.getElementById("card3")
 function displaySearch() {
 
     let cityName = document.getElementById("cityChoice").value;
@@ -144,7 +144,7 @@ anotherJoke.addEventListener("click", function (event) {
 })
 
 keeper.addEventListener("click", function (event) {
-
+    thirdCard.classList.add("c3Style")
 
     event.target.matches("goodJoke");
 
@@ -161,6 +161,7 @@ keeper.addEventListener("click", function (event) {
 brewDiv.addEventListener("click", function (event) {
 
     if (event.target.matches("button")) {
+        thirdCard.classList.add("c3Style")
         let newDiv = event.target.parentElement;
         let barNameElement = event.target.parentElement.previousSibling
         console.log(barNameElement)
@@ -174,11 +175,12 @@ brewDiv.addEventListener("click", function (event) {
         finalBrew.innerHTML = "You selected the following brewery: " + barName + brewStorage;
         let buttonFromCard = finalBrew.querySelector("button")
         finalBrew.removeChild(buttonFromCard);
+        
     }
 })
 
 function removeJokeItems(){
-    requestJoke.style.visibility = "hidden"
-    jokeHeader.style.visibility = "hidden"
+    requestJoke.remove()
+    jokeHeader.remove()
 }
 
