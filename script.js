@@ -162,12 +162,16 @@ brewDiv.addEventListener("click", function (event) {
 
     if (event.target.matches("button")) {
         let newDiv = event.target.parentElement;
+        let barNameElement = event.target.parentElement.previousSibling
+        console.log(barNameElement)
+        let barName = barNameElement.innerHTML
+        localStorage.setItem("barName", barName)
         console.log(newDiv)
         divContent = newDiv.innerHTML;
         localStorage.setItem("divContent", divContent)
         let brewStorage = localStorage.getItem("divContent");
         let finalBrew = document.getElementById("finalBrew");
-        finalBrew.innerHTML = "You selected the following brewery: " + brewStorage;
+        finalBrew.innerHTML = "You selected the following brewery: " + barName + brewStorage;
         let buttonFromCard = finalBrew.querySelector("button")
         finalBrew.removeChild(buttonFromCard);
     }
