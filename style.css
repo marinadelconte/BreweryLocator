@@ -1,66 +1,52 @@
 body {
     background-color: rgb(194, 221, 255);
     font-family: 'Lora', serif;
-    background-image: linear-gradient(to right, rgba(255,228,196,0), rgb(97, 99, 122));    
+    background-image: linear-gradient(to right, rgba(255,228,196,0), rgb(97, 99, 122));
 }
-
-
 header {
     text-align: center;
     font-size: 25px;
     padding: 15px;
     background-color: rgb(189, 126, 70);
     background-image: linear-gradient(to right, rgba(255,228,196,0), rgba(255,228,196,1));
-
 }
-
 .joke-options {
     display: none;
-    flex-direction: row; 
+    flex-direction: row;
 }
-
 .input-color {
     background-color: rgb(183, 141, 108);
     border: 1px black solid
 }
-
 .alt-color {
     background-color: rgb(106, 89, 77);
     border: 1px black solid
 }
-
 .brewcard-style-body {
     background-color: rgb(141, 136, 136);
 }
-
 .brewcard-style-title {
     background-color:rgb(184, 172, 172)
 }
-
 #badJoke {
     color: black;
 }
-
 #goodJoke {
     color: black;
 }
-
 #jokeBtn {
     color: black;
 }
-
 /*(225, 197, 197)
 (170, 130, 130);
 */
-
 #card1{
     max-height: 700px;
     overflow-y: scroll;
     margin-bottom: 15px;
 }
-
 footer {
-margin-left: 13%;    
+margin-left: 13%;
 text-align: center;
 border-top: 2px solid black;
 width: 70%;
@@ -69,24 +55,20 @@ position: absolute;
 bottom: 0;
 height: 3.0rem;
 }
-
 footer, h6 {
     padding-top: 10px;
 }
-
 @media screen and (min-width: 992px) {
     .card {
         width: 40;
     }
 }
-
 @media screen and (min-width: 768px) {
     .card {
         width: 50;
         flex-direction: column;
     }
 }
-
 @media screen and (min-width: 600px) {
     .card {
         width: 100;
