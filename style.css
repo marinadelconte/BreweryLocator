@@ -28,6 +28,7 @@ header {
 #card1{
     max-height: 700px;
     overflow-y: scroll;
+    margin-bottom: 15px;
 }
 
 footer {
@@ -36,6 +37,9 @@ text-align: center;
 border-top: 2px solid black;
 width: 70%;
 height: 15%;
+position: absolute;
+bottom: 0;
+height: 3.0rem;
 }
 
 footer, h6 {

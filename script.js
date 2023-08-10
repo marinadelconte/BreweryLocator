@@ -1,6 +1,5 @@
 let searchButton = document.getElementById("button-addon1")
 let myModal = new bootstrap.Modal(document.querySelector('.modal'));
-let myModal2 = new bootstrap.Modal(document.querySelector('.modal-num2'));
 
 function displaySearch() {
 
