@@ -37,14 +37,28 @@ header {
 #jokeBtn {
     color: black;
 }
-/*(225, 197, 197)
-(170, 130, 130);
-*/
+#brewery{
+    padding-right: 5px;
+  }
 #card1{
     max-height: 700px;
     overflow-y: scroll;
-    margin-bottom: 15px;
+    padding: 20px;
+    border: 3px solid black;
+    position: relative;
+    left: 10px;
+    padding-right: 0px;
+    padding-left: 3px;
 }
+#card2{
+    border: 3px solid black;
+    background-color: white;
+  }
+.c3Style{
+    border: 3px solid black;
+    background-color: white;
+  }
+  
 footer {
 margin-left: 13%;
 text-align: center;
@@ -58,20 +72,54 @@ height: 3.0rem;
 footer, h6 {
     padding-top: 10px;
 }
-@media screen and (min-width: 992px) {
-    .card {
-        width: 40;
-    }
+@media screen and (max-width: 992px) {
+   #mainSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   }
+   #card1, #card2, #card3{
+    width: 80%;
+    
 }
-@media screen and (min-width: 768px) {
-    .card {
-        width: 50;
+    #card2{
+        position:relative;
+        margin-bottom: 15px;
+        left: 10px;
+    }
+    #card3{
+       
+        position: relative;
+        left: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #mainSection {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
-}
-@media screen and (min-width: 600px) {
+   
+    #card1, #card2, #card3{
+        width: 80%;
+        
+    }
+    #card1{
+        position: relative;
+        
+    }
+    #card2{
+        position: relative;
+        
+        margin-left: 0px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
     .card {
         width: 100;
         flex-direction: column;
     }
-}
+  }
