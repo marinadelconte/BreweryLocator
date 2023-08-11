@@ -10,11 +10,11 @@ Using an API to locate breweries by city and another API to generate a random jo
 To use, first enter a city into the search bar and the number of breweries that you would like to see located in or near that city. If either field is left blank, a message will pop-up prompting you to provide a response. From the list of breweries that are provided, you can click to select the one that you would like to go to. Next, you will be prompted to generate a random joke. Once the joke is generated, you will be asked if this is the joke that you would like to use, or if you would like to have a new joke generated. Once a brewery and a joke are selected, your final choices will display on the screen.
 
 
-The Brewery Locator & Random Joke Generator can be accessed via the following link:
+The Brewery Locator & Random Joke Generator can be accessed via the following link: https://pb1983.github.io/Project1/  
 
 
 Below is a screenshot of the webpage:
-
+![Screenshot (18)](https://github.com/pb1983/Project1/assets/137957098/4d43e7b0-5548-4118-8856-232bee0d6d64)
 
 
 
