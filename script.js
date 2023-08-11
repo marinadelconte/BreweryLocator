@@ -6,11 +6,13 @@ function displaySearch() {
     let cityName = document.getElementById("cityChoice").value;
     let numResults = document.getElementById("resultsNumber").value;
 
+    //the user will be alerted if they leave one of the input fields blank
     if (numResults <= 0 || numResults === "" || cityName === "") {
         myModal.show();
         return;
     }
 
+    //use the open brewery api to search a city and enter a number of search results that you would like to see
     fetch(`https://api.openbrewerydb.org/v1/breweries?by_city=${cityName}&per_page=${numResults}`)
         .then(function (response) {
 
@@ -69,6 +71,7 @@ function displaySearch() {
             } childNum = breweries.length
         })
 }
+
 function removeChildren(brewDiv) {
     let parentDiv = brewDiv;
     while (parentDiv.firstChild) {
@@ -102,7 +105,7 @@ let jokeHeader = document.querySelector("#jokeHeader")
 
 
 
-
+//use the geek-jokes API to generate a random joke, if you do not like the joke, you can generate a new one
 requestJoke.addEventListener("click", function (event) {
     event.target.matches("#jokeBtn");
 
@@ -158,6 +161,7 @@ keeper.addEventListener("click", function (event) {
 
 })
 
+//once the user selects the brewery they would like, it will populate on then page 
 brewDiv.addEventListener("click", function (event) {
 
     if (event.target.matches("button")) {
@@ -177,4 +181,3 @@ function removeJokeItems(){
     requestJoke.style.visibility = "hidden"
     jokeHeader.style.visibility = "hidden"
 }
-

@@ -68,8 +68,9 @@ height: 15%;
 position: absolute;
 bottom: 0;
 height: 3.0rem;
-}
 
+
+}
 footer, h6 {
     padding-top: 10px;
 }
@@ -91,5 +92,6 @@ footer, h6 {
     .card {
         width: 100;
         flex-direction: column;
-    }
+    } 
+    
 }
