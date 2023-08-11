@@ -14,7 +14,8 @@ The Brewery Locator & Random Joke Generator can be accessed via the following li
 
 
 Below is a screenshot of the webpage:
-![Screenshot (18)](https://github.com/pb1983/Project1/assets/137957098/4d43e7b0-5548-4118-8856-232bee0d6d64)
+![Screenshot (22)](https://github.com/pb1983/Project1/assets/137957098/b512a425-1c6f-46ae-bbd4-b984c15d70ca)
+
 
 
 
