@@ -1,8 +1,7 @@
 let searchButton = document.getElementById("button-addon1")
 let myModal = new bootstrap.Modal(document.querySelector('.modal'));
-
+let thirdCard = document.getElementById("card3")
 function displaySearch() {
-
     let cityName = document.getElementById("cityChoice").value;
     let numResults = document.getElementById("resultsNumber").value;
 
@@ -15,12 +14,10 @@ function displaySearch() {
     //use the open brewery api to search a city and enter a number of search results that you would like to see
     fetch(`https://api.openbrewerydb.org/v1/breweries?by_city=${cityName}&per_page=${numResults}`)
         .then(function (response) {
-
             return response.json()
         })
         .then(function (breweries) {
             console.log(breweries)
-
             for (let i = 0; i < breweries.length; i++) {
                 let newDiv = document.createElement("div");
                 newDiv.classList.add("newDiv")
@@ -78,8 +75,6 @@ function removeChildren(brewDiv) {
         brewDiv.removeChild(parentDiv.firstChild)
     }
 }
-
-
 let brewDiv = document.getElementById("brewItems")
 let childNum = 0;
 searchButton.addEventListener("click", function (event) {
@@ -92,7 +87,6 @@ searchButton.addEventListener("click", function (event) {
         displaySearch()
     }
 })
-
 let requestJoke = document.querySelector("#jokeBtn");
 let returnJoke = document.querySelector("#joke")
 let anotherJoke = document.querySelector("#badJoke");
@@ -108,34 +102,24 @@ let jokeHeader = document.querySelector("#jokeHeader")
 //use the geek-jokes API to generate a random joke, if you do not like the joke, you can generate a new one
 requestJoke.addEventListener("click", function (event) {
     event.target.matches("#jokeBtn");
-
     fetch('https://geek-jokes.sameerkumar.website/api?format=json')
         .then(function (response) {
-
             return response.json()
         })
         .then(function (newJoke) {
             console.log(newJoke);
             randomJoke = newJoke.joke;
             returnJoke.textContent = randomJoke;
-
             for (let i = 0; i < jokeOptions.length; i++) {
                 jokeOptions[i].style.display = "flex";
-
             }
             removeJokeItems();
         })
 })
-
 anotherJoke.addEventListener("click", function (event) {
-
-
     event.target.matches("#badJoke");
-
-
     fetch('https://geek-jokes.sameerkumar.website/api?format=json')
         .then(function (response) {
-
             return response.json()
         })
         .then(function (newJoke) {
@@ -144,40 +128,35 @@ anotherJoke.addEventListener("click", function (event) {
             returnJoke.textContent = randomJoke;
         })
 })
-
 keeper.addEventListener("click", function (event) {
-
-
+    thirdCard.classList.add("c3Style")
     event.target.matches("goodJoke");
-    
-
     localStorage.setItem("randomJoke", randomJoke);
-
     let jokeStorage = localStorage.getItem("randomJoke");
-
     joke.style.display = "hidden";
-
     finalJoke.innerHTML = "<b> While you're there, try out this joke: </b>" + jokeStorage;
-
 })
 
 //once the user selects the brewery they would like, it will populate on then page 
 brewDiv.addEventListener("click", function (event) {
-
     if (event.target.matches("button")) {
+        thirdCard.classList.add("c3Style")
         let newDiv = event.target.parentElement;
+        let barNameElement = event.target.parentElement.previousSibling
+        console.log(barNameElement)
+        let barName = barNameElement.innerHTML
+        localStorage.setItem("barName", barName)
         console.log(newDiv)
         divContent = newDiv.innerHTML;
         localStorage.setItem("divContent", divContent)
         let brewStorage = localStorage.getItem("divContent");
         let finalBrew = document.getElementById("finalBrew");
-        finalBrew.innerHTML = "<b> You selected the following brewery</b>: " + brewStorage;
+        finalBrew.innerHTML = "<b>You selected the following brewery: " + barName + brewStorage +"</b>";
         let buttonFromCard = finalBrew.querySelector("button")
-        finalBrew.removeChild(buttonFromCard);
+        buttonFromCard.remove();  
     }
 })
-
 function removeJokeItems(){
-    requestJoke.style.visibility = "hidden"
-    jokeHeader.style.visibility = "hidden"
+    requestJoke.remove()
+    jokeHeader.remove()
 }
