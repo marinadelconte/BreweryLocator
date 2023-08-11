@@ -4,10 +4,14 @@ let thirdCard = document.getElementById("card3")
 function displaySearch() {
     let cityName = document.getElementById("cityChoice").value;
     let numResults = document.getElementById("resultsNumber").value;
+
+    //the user will be alerted if they leave one of the input fields blank
     if (numResults <= 0 || numResults === "" || cityName === "") {
         myModal.show();
         return;
     }
+
+    //use the open brewery api to search a city and enter a number of search results that you would like to see
     fetch(`https://api.openbrewerydb.org/v1/breweries?by_city=${cityName}&per_page=${numResults}`)
         .then(function (response) {
             return response.json()
@@ -64,6 +68,7 @@ function displaySearch() {
             } childNum = breweries.length
         })
 }
+
 function removeChildren(brewDiv) {
     let parentDiv = brewDiv;
     while (parentDiv.firstChild) {
@@ -90,6 +95,11 @@ let jokeOptions = document.getElementsByClassName("joke-options")
 let jokeChoice = document.querySelector("#finalJoke");
 let randomJoke = "";
 let jokeHeader = document.querySelector("#jokeHeader")
+
+
+
+
+//use the geek-jokes API to generate a random joke, if you do not like the joke, you can generate a new one
 requestJoke.addEventListener("click", function (event) {
     event.target.matches("#jokeBtn");
     fetch('https://geek-jokes.sameerkumar.website/api?format=json')
@@ -126,6 +136,8 @@ keeper.addEventListener("click", function (event) {
     joke.style.display = "hidden";
     finalJoke.innerHTML = "<b> While you're there, try out this joke: </b>" + jokeStorage;
 })
+
+//once the user selects the brewery they would like, it will populate on then page 
 brewDiv.addEventListener("click", function (event) {
     if (event.target.matches("button")) {
         thirdCard.classList.add("c3Style")
