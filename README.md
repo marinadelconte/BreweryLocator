@@ -24,11 +24,14 @@ Below is a screenshot of the webpage:
 This project was made in collaboration with the following individuals:
  
 Daniel MacDonald - https://github.com/danmac121
+
 Phil Bryer - https://github.com/pb1983 
+
 Marina Del Conte - https://github.com/marinadelconte
 
 To create this project we used the following API's:
 https://api.openbrewerydb.org/v1/breweries?by_city
+
 https://geek-jokes.sameerkumar.website/api
 
 
