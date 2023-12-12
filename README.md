@@ -2,7 +2,15 @@
 
 ## Description
 
-Using an API to locate breweries by city and another API to generate a random joke, we have created the Brewery Locator & Random Joke Generator application. Using two API's paired together for this application provides users with both a list of breweries in their area, as well as a random joke that they can use once they get there. The user will select a brewery from the list provided and a joke from the random joke generator. This application was created using JavaScript, HTML, and CSS.
+Using an API to locate breweries by city and another API to generate a random joke, we have created the Brewery Locator & Random Joke Generator application. The user will enter a location into the search bar and select a brewery from the list provided. Then they will select a joke from the random joke generator.
+
+## Technology Used
+
+This application was created using JavaScript, HTML, CSS, Local Storage, and the following APIs:
+
+https://api.openbrewerydb.org/v1/breweries?by_city
+
+https://geek-jokes.sameerkumar.website/api
 
 ## Usage
 
@@ -22,13 +30,6 @@ Daniel MacDonald - https://github.com/danmac121
 Phil Bryer - https://github.com/pb1983 
 
 Marina Del Conte - https://github.com/marinadelconte
-
-
-To create this project we used the following API's:
-
-https://api.openbrewerydb.org/v1/breweries?by_city
-
-https://geek-jokes.sameerkumar.website/api
 
 
 
