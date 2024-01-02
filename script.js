@@ -97,8 +97,6 @@ let randomJoke = "";
 let jokeHeader = document.querySelector("#jokeHeader")
 
 
-
-
 //use the geek-jokes API to generate a random joke, if you do not like the joke, you can generate a new one
 requestJoke.addEventListener("click", function (event) {
     event.target.matches("#jokeBtn");

@@ -17,7 +17,8 @@ header {
     border: 1px black solid
 }
 .alt-color {
-    background-color: rgb(194, 221, 255);
+    background-color: rgb(82, 91, 133);
+    color: rgb(255, 255, 255);
     border: 1px black solid
 }
 .brewcard-style-body {
@@ -28,18 +29,17 @@ header {
     background-color:rgb(82, 91, 133);
     color: rgb(255, 255, 255);
 }
-#badJoke {
-    color: black;
-}
-#goodJoke {
-    color: black;
-}
+
+#badJoke,
+#goodJoke,
 #jokeBtn {
-    color: black;
+    color: rgb(255, 255, 255);
 }
+
 #brewery{
     padding-right: 5px;
   }
+
 #card1{
     max-height: 800px;
     overflow-y: scroll;
@@ -52,14 +52,16 @@ header {
     top: 38px;
     margin-bottom: 88px;
 }
+
 #card2{
-    border: 1px solid black;
-    background-color: rgb(184, 172, 172);
+    border: 1px dashed rgb(32, 32, 32);
+    background-color: rgb(253, 251, 244);
     border-radius: 10px;
   }
-.c3Style{
-    border: 1px solid black;
-    background-color: rgb(184, 172, 172);
+
+#card3{
+    border: 1px dashed rgb(32, 32, 32);
+    background-color: rgb(253, 251, 244);
     border-radius: 10px;
   }
   
@@ -67,15 +69,13 @@ footer {
 width: 100%;
 text-align: center;
 background-color: rgb(221, 217, 205);
-height: 15%;
+height: 10%;
 position: fixed;
 bottom: 0;
-height: 3.0rem;
+height: 2.5rem;
+padding-top: 10px;
 }
 
-footer, h6 {
-    padding-top: 10px;
-}
 @media screen and (max-width: 992px) {
    #mainSection{
     display: flex;
