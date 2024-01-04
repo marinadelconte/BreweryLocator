@@ -28,7 +28,6 @@ function displaySearch() {
                 let website = document.createElement("a")
                 let saveLocal = document.createElement("button")
                 let brewery = document.getElementById("brewItems")
-                let phoneNumber = document.createElement("p")
                 brewery.appendChild(newDiv)
                 newDiv.classList.add("card")
                 newDiv.appendChild(barName)
@@ -39,14 +38,11 @@ function displaySearch() {
                 address.classList.add("card-title")
                 secondDiv.appendChild(barType)
                 barType.classList.add("card-text")
-                secondDiv.appendChild(phoneNumber)
-                phoneNumber.classList.add("card-text")
                 secondDiv.appendChild(website)
                 secondDiv.appendChild(saveLocal)
                 saveLocal.classList.add("btn", "btn-outline-dark", "input-color")
                 website.classList.add("btn", "btn-outline-dark", "input-color")
                 website.setAttribute("href", breweries[i].website_url)
-                phoneNumber.textContent = (breweries[i].phone)
                 barName.textContent = (breweries[i].name)
                 address.textContent = (breweries[i].address_1)
                 barType.textContent = ("This brewery is a " + breweries[i].brewery_type + " brewery!")
@@ -62,9 +58,7 @@ function displaySearch() {
                 if (!breweries[i].brewery_type) {
                     barType.textContent = "We're not sure what kind of bar this is!"
                 }
-                if (!breweries[i].phone) {
-                    phoneNumber.textContent = "Phone number not found"
-                }
+                
             } childNum = breweries.length
         })
 }

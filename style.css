@@ -30,10 +30,24 @@ header {
     color: rgb(255, 255, 255);
 }
 
-#badJoke,
+#badJoke {
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    height:fit-content;
+  
+}
+
+#goodJoke {
+    height: fit-content;
+}
+
+#jokeBtn {
+    width: 200px;
+}
+
 #goodJoke,
 #jokeBtn {
-    color: rgb(255, 255, 255);
+    color: black;
 }
 
 #brewery{
@@ -57,25 +71,31 @@ header {
     border: 1px dashed rgb(32, 32, 32);
     background-color: rgb(253, 251, 244);
     border-radius: 10px;
+    text-align: center;
+    max-width: fit-content;
+    max-height: fit-content;
   }
 
-#card3{
+#c3Style, #card3{
     border: 1px dashed rgb(32, 32, 32);
     background-color: rgb(253, 251, 244);
     border-radius: 10px;
+    text-align: center;
   }
   
 footer {
 width: 100%;
 text-align: center;
 background-color: rgb(221, 217, 205);
-height: 10%;
+height: 15%;
 position: fixed;
 bottom: 0;
-height: 2.5rem;
-padding-top: 10px;
+height: 3.0rem;
 }
 
+footer, h6 {
+    padding-top: 10px;
+}
 @media screen and (max-width: 992px) {
    #mainSection{
     display: flex;
