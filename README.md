@@ -19,6 +19,8 @@ To use, first enter a city into the search bar and the number of breweries that 
 The Brewery Locator & Random Joke Generator can be accessed via the following link: https://marinadelconte.github.io/BreweryLocator/
 
 Below is a screenshot of the webpage:
+![image](https://github.com/marinadelconte/BreweryLocator/assets/137957098/134c08e4-9c3a-4856-a770-b13397635e31)
+
 
 ## Credits
 
