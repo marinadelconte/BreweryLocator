@@ -16,10 +16,9 @@ https://geek-jokes.sameerkumar.website/api
 
 To use, first enter a city into the search bar and the number of breweries that you would like to see located in or near that city. If either field is left blank, a message will pop-up prompting you to provide a response. From the list of breweries that are provided, you can click to select the one that you would like to go to. Next, you will be prompted to generate a random joke. Once the joke is generated, you will be asked if this is the joke that you would like to use, or if you would like to have a new joke generated. Once a brewery and a joke are selected, your final choices will display on the screen.
 
-The Brewery Locator & Random Joke Generator can be accessed via the following link: https://pb1983.github.io/Project1/  
+The Brewery Locator & Random Joke Generator can be accessed via the following link: [https://pb1983.github.io/Project1/  ](https://marinadelconte.github.io/BreweryLocator/)
 
 Below is a screenshot of the webpage:
-![Screenshot (22)](https://github.com/pb1983/Project1/assets/137957098/b512a425-1c6f-46ae-bbd4-b984c15d70ca)
 
 ## Credits
 
