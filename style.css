@@ -51,6 +51,11 @@ header {
 }
 
 #goodJoke,
+#badJoke {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#goodJoke,
 #jokeBtn {
     color: black;
 }
