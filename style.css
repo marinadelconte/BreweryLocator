@@ -2,6 +2,11 @@ body {
     background-color: rgb(194, 221, 255);
     font-family: 'Lora', serif;
 }
+
+main {
+    margin-top: 20px;
+}
+
 header {
     text-align: center;
     font-size: 25px;
@@ -56,6 +61,7 @@ header {
 
 #card1{
     max-height: 800px;
+    max-width: 650px;
     overflow-y: scroll;
     padding: 10px;
     border: 1px dashed rgb(32, 32, 32);
@@ -63,8 +69,13 @@ header {
     left: 10px;
     padding-right: 0px;
     padding-left: 3px;
-    top: 38px;
-    margin-bottom: 88px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#mainSection {
+    padding-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 #card2{
@@ -72,16 +83,27 @@ header {
     background-color: rgb(253, 251, 244);
     border-radius: 10px;
     text-align: center;
-    max-width: fit-content;
+    max-width: 600px;
     max-height: fit-content;
+    padding: 0px 0px 0px 0px;
+    
   }
 
-#c3Style, #card3{
+#c3Style{
     border: 1px dashed rgb(32, 32, 32);
     background-color: rgb(253, 251, 244);
     border-radius: 10px;
     text-align: center;
   }
+
+#card3 {
+    display: hidden;
+    text-align: center;
+}
+
+.brewBtn {
+    margin: 10px;
+}
   
 footer {
 width: 100%;

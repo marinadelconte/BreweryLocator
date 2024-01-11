@@ -40,8 +40,8 @@ function displaySearch() {
                 barType.classList.add("card-text")
                 secondDiv.appendChild(website)
                 secondDiv.appendChild(saveLocal)
-                saveLocal.classList.add("btn", "btn-outline-dark", "input-color")
-                website.classList.add("btn", "btn-outline-dark", "input-color")
+                saveLocal.classList.add("brewBtn", "btn", "btn-outline-dark", "input-color")
+                website.classList.add("brewBtn", "btn", "btn-outline-dark", "input-color")
                 website.setAttribute("href", breweries[i].website_url)
                 barName.textContent = (breweries[i].name)
                 address.textContent = (breweries[i].address_1)
@@ -143,7 +143,9 @@ brewDiv.addEventListener("click", function (event) {
         localStorage.setItem("divContent", divContent)
         let brewStorage = localStorage.getItem("divContent");
         let finalBrew = document.getElementById("finalBrew");
-        finalBrew.innerHTML = "<b>You selected the following brewery: " + barName + brewStorage +"</b>";
+        finalBrew.innerHTML = 
+            `<b> You selected the following brewery: <b>` +
+            barName 
         let buttonFromCard = finalBrew.querySelector("button")
         buttonFromCard.remove();  
     }
